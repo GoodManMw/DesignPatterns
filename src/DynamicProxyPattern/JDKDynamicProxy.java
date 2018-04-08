@@ -45,9 +45,9 @@ class ProxySubject implements InvocationHandler{
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		// TODO Auto-generated method stub
 		System.out.println("代理实现之前的操作");
-		method.invoke(sub, args);
+		Object o = method.invoke(sub, args);
 		System.out.println("代理实现之后的操作");
-		return null;
+		return o;
 	}
 	
 }
